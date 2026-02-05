@@ -26,6 +26,6 @@ public class LivingEntityStateRenderMixin implements TrinketEntityRenderState {
 
     @Override
     public List<Pair<ItemStack, SlotReference>> trinkets$getState() {
-        return this.trinketsState;
-    }
+        return this.trinketsState == null ? List.of() : this.trinketsState;
+}
 }
